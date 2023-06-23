@@ -5,7 +5,7 @@
 ## Steps to run the project
 
 1. Clone this repo
-2. Create database in mysql named elixir_chat_app
+2. Create database in mysql named `elixir_chat_app`
 3. Run `mix deps.get` to install dependencies
 4. Run `mix ecto.migrate` to run migrations
 5. Run `mix phx.server` to start the server
