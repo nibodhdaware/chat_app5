@@ -1,4 +1,4 @@
-defmodule ChatApp5.Message do
+defmodule ElixirChatApp.Message do
   use Ecto.Schema
   import Ecto.Changeset
 

@@ -1,5 +1,5 @@
-defmodule ChatApp5Web.PageControllerTest do
-  use ChatApp5Web.ConnCase
+defmodule ElixirChatAppWeb.PageControllerTest do
+  use ElixirChatAppWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, ~p"/")

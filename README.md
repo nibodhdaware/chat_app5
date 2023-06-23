@@ -1,4 +1,4 @@
-# ChatApp5
+# ElixirChatApp
 
 ---
 

@@ -1,4 +1,4 @@
-defmodule ChatApp5Web.UserPage do
+defmodule ElixirChatAppWeb.UserPage do
   use Phoenix.Controller
 
   def submit_form(conn, %{"username" => username}) do

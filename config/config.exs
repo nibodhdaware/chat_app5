@@ -7,17 +7,17 @@
 # General application configuration
 import Config
 
-config :chat_app5,
-  ecto_repos: [ChatApp5.Repo]
+config :elixir_chat_app,
+  ecto_repos: [ElixirChatApp.Repo]
 
 # Configures the endpoint
-config :chat_app5, ChatApp5Web.Endpoint,
+config :elixir_chat_app, ElixirChatAppWeb.Endpoint,
   url: [host: "localhost"],
   render_errors: [
-    formats: [html: ChatApp5Web.ErrorHTML, json: ChatApp5Web.ErrorJSON],
+    formats: [html: ElixirChatAppWeb.ErrorHTML, json: ElixirChatAppWeb.ErrorJSON],
     layout: false
   ],
-  pubsub_server: ChatApp5.PubSub,
+  pubsub_server: ElixirChatApp.PubSub,
   live_view: [signing_salt: "sIzxSsBA"]
 
 # Configures the mailer
@@ -27,7 +27,7 @@ config :chat_app5, ChatApp5Web.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :chat_app5, ChatApp5.Mailer, adapter: Swoosh.Adapters.Local
+config :elixir_chat_app, ElixirChatApp.Mailer, adapter: Swoosh.Adapters.Local
 
 # Configure esbuild (the version is required)
 config :esbuild,

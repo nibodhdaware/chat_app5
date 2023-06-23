@@ -1,11 +1,11 @@
-defmodule ChatApp5Web.Router do
-  use ChatApp5Web, :router
+defmodule ElixirChatAppWeb.Router do
+  use ElixirChatAppWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_live_flash
-    plug :put_root_layout, html: {ChatApp5Web.Layouts, :root}
+    plug :put_root_layout, html: {ElixirChatAppWeb.Layouts, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
@@ -14,7 +14,7 @@ defmodule ChatApp5Web.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", ChatApp5Web do
+  scope "/", ElixirChatAppWeb do
     pipe_through :browser
 
     get "/", PageController, :home
@@ -23,12 +23,12 @@ defmodule ChatApp5Web.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", ChatApp5Web do
+  # scope "/api", ElixirChatAppWeb do
   #   pipe_through :api
   # end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
-  if Application.compile_env(:chat_app5, :dev_routes) do
+  if Application.compile_env(:elixir_chat_app, :dev_routes) do
     # If you want to use the LiveDashboard in production, you should put
     # it behind authentication and allow only admins to access it.
     # If your application does not have an admins-only section yet,
@@ -39,7 +39,7 @@ defmodule ChatApp5Web.Router do
     scope "/dev" do
       pipe_through :browser
 
-      live_dashboard "/dashboard", metrics: ChatApp5Web.Telemetry
+      live_dashboard "/dashboard", metrics: ElixirChatAppWeb.Telemetry
       forward "/mailbox", Plug.Swoosh.MailboxPreview
     end
   end

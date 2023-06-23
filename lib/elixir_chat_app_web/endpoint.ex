@@ -1,12 +1,12 @@
-defmodule ChatApp5Web.Endpoint do
-  use Phoenix.Endpoint, otp_app: :chat_app5
+defmodule ElixirChatAppWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :elixir_chat_app
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_chat_app5_key",
+    key: "_elixir_chat_app_key",
     signing_salt: "wfODdySl",
     same_site: "Lax"
   ]
@@ -19,9 +19,9 @@ defmodule ChatApp5Web.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :chat_app5,
+    from: :elixir_chat_app,
     gzip: false,
-    only: ChatApp5Web.static_paths()
+    only: ElixirChatAppWeb.static_paths()
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
@@ -29,7 +29,7 @@ defmodule ChatApp5Web.Endpoint do
     socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :chat_app5
+    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :elixir_chat_app
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,
@@ -47,5 +47,5 @@ defmodule ChatApp5Web.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug ChatApp5Web.Router
+  plug ElixirChatAppWeb.Router
 end

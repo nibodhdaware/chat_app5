@@ -1,5 +1,5 @@
-defmodule ChatApp5Web.ChatAppLive do
-  use ChatApp5Web, :live_view
+defmodule ElixirChatAppWeb.ChatAppLive do
+  use ElixirChatAppWeb, :live_view
 
   def mount(_params, session, socket) do
     username = Map.get(session, "username")
@@ -36,7 +36,7 @@ defmodule ChatApp5Web.ChatAppLive do
     # IO.inspect(payload)
     # IO.inspect(%{m_text: m_text, m_author: m_author})
     if m_text && m_author do
-      message = ChatApp5.create_message(%{m_text: m_text, m_author: m_author})
+      message = ElixirChatApp.create_message(%{m_text: m_text, m_author: m_author})
       # Use assign/3 to update the messages list with the new message
       socket =
         socket
@@ -49,7 +49,7 @@ defmodule ChatApp5Web.ChatAppLive do
   end
 
   defp get_messages() do
-    case ChatApp5.list_messages() do
+    case ElixirChatApp.list_messages() do
       {:ok, messages} -> messages
       _ -> []
     end

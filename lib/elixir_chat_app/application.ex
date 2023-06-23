@@ -1,4 +1,4 @@
-defmodule ChatApp5.Application do
+defmodule ElixirChatApp.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -9,22 +9,22 @@ defmodule ChatApp5.Application do
   def start(_type, _args) do
     children = [
       # Start the Telemetry supervisor
-      ChatApp5Web.Telemetry,
+      ElixirChatAppWeb.Telemetry,
       # Start the Ecto repository
-      ChatApp5.Repo,
+      ElixirChatApp.Repo,
       # Start the PubSub system
-      {Phoenix.PubSub, name: ChatApp5.PubSub},
+      {Phoenix.PubSub, name: ElixirChatApp.PubSub},
       # Start Finch
-      {Finch, name: ChatApp5.Finch},
+      {Finch, name: ElixirChatApp.Finch},
       # Start the Endpoint (http/https)
-      ChatApp5Web.Endpoint
-      # Start a worker by calling: ChatApp5.Worker.start_link(arg)
-      # {ChatApp5.Worker, arg}
+      ElixirChatAppWeb.Endpoint
+      # Start a worker by calling: ElixirChatApp.Worker.start_link(arg)
+      # {ElixirChatApp.Worker, arg}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: ChatApp5.Supervisor]
+    opts = [strategy: :one_for_one, name: ElixirChatApp.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
@@ -32,7 +32,7 @@ defmodule ChatApp5.Application do
   # whenever the application is updated.
   @impl true
   def config_change(changed, _new, removed) do
-    ChatApp5Web.Endpoint.config_change(changed, removed)
+    ElixirChatAppWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end

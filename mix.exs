@@ -1,9 +1,9 @@
-defmodule ChatApp5.MixProject do
+defmodule ElixirChatApp.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :chat_app5,
+      app: :elixir_chat_app,
       version: "0.1.0",
       elixir: "~> 1.14",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -18,7 +18,7 @@ defmodule ChatApp5.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {ChatApp5.Application, []},
+      mod: {ElixirChatApp.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

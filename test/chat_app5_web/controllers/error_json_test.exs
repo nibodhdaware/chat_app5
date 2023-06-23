@@ -1,12 +1,12 @@
-defmodule ChatApp5Web.ErrorJSONTest do
-  use ChatApp5Web.ConnCase, async: true
+defmodule ElixirChatAppWeb.ErrorJSONTest do
+  use ElixirChatAppWeb.ConnCase, async: true
 
   test "renders 404" do
-    assert ChatApp5Web.ErrorJSON.render("404.json", %{}) == %{errors: %{detail: "Not Found"}}
+    assert ElixirChatAppWeb.ErrorJSON.render("404.json", %{}) == %{errors: %{detail: "Not Found"}}
   end
 
   test "renders 500" do
-    assert ChatApp5Web.ErrorJSON.render("500.json", %{}) ==
+    assert ElixirChatAppWeb.ErrorJSON.render("500.json", %{}) ==
              %{errors: %{detail: "Internal Server Error"}}
   end
 end

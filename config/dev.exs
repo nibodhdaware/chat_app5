@@ -1,7 +1,7 @@
 import Config
 
 # Configure your database
-config :chat_app5, ChatApp5.Repo,
+config :elixir_chat_app, ElixirChatApp.Repo,
   username: "root",
   password: "nibodh1284",
   hostname: "localhost",
@@ -16,7 +16,7 @@ config :chat_app5, ChatApp5.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we can use it
 # to bundle .js and .css sources.
-config :chat_app5, ChatApp5Web.Endpoint,
+config :elixir_chat_app, ElixirChatAppWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
   http: [ip: {127, 0, 0, 1}, port: 4000],
@@ -53,17 +53,17 @@ config :chat_app5, ChatApp5Web.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :chat_app5, ChatApp5Web.Endpoint,
+config :elixir_chat_app, ElixirChatAppWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/chat_app5_web/(controllers|live|components)/.*(ex|heex)$"
+      ~r"lib/elixir_chat_app_web/(controllers|live|components)/.*(ex|heex)$"
     ]
   ]
 
 # Enable dev routes for dashboard and mailbox
-config :chat_app5, dev_routes: true
+config :elixir_chat_app, dev_routes: true
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"

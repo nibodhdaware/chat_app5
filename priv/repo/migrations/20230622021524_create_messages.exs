@@ -1,4 +1,4 @@
-defmodule ChatApp5.Repo.Migrations.CreateMessages do
+defmodule ElixirChatApp.Repo.Migrations.CreateMessages do
   use Ecto.Migration
 
   def change do
