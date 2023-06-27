@@ -1,4 +1,4 @@
-# ElixirChatApp
+# Chatixir
 
 ---
 
